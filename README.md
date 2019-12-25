@@ -8,6 +8,6 @@ Außerdem soll der Nachdruck von Zeugnissen dadurch auch nach längerer Zeit mö
 Das Repository beinhaltet folgende Elemente:
 * Ordner für Ankreuzzeugnisse
 * Ordner für die Dokumentation (Anleitungen für Kollegen)
-* Später das Lehrermodul
+* das Lehrermodul für die Bearbeitung der notendateien auf dem eigenen PC
 * Beispiele für die Textbausteine und Ankreuzkompetenzen
 * Ordner für die Textzeugnisse
