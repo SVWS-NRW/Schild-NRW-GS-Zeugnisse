@@ -23,6 +23,7 @@ object Report: TppReport
   DeviceType = 'Screen'
   DefaultFileDeviceType = 'PDF'
   EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.DeleteFile = False
   EmailSettings.Enabled = True
   LanguageID = 'Default'
   OpenFile = False
@@ -66,7 +67,7 @@ object Report: TppReport
     Background2.Brush.Style = bsClear
     PrintHeight = phDynamic
     mmBottomOffset = 0
-    mmHeight = 132821
+    mmHeight = 99219
     mmPrintPosition = 0
     object ppLabel3: TppLabel
       UserName = 'lblBez3'
