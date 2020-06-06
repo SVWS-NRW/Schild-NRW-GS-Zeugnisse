@@ -1,0 +1,14 @@
+
+***
+
+Versionsgeschichte der Grundschulzeugnisse
+
+***
+
+
+2020_06_06 Erstes Release
+
+Es wurden Textzeugnisse und Ankreuzzeugnisse nochmals verbessert.
+Ein Fehler bei der Anzeige des ASV in der Vorschau im Lehrermodul wurde behoben.
+Erste Versionen der Lernstandsberichte für Seiteneinsteiger wurde bereit gestellt.
+Inklusionszeugnisse können nun mit den Textzeugnisse gedruckt werden.
