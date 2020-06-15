@@ -4404,6 +4404,7 @@ object Report: TppReport
     end
     object ppGroupFooterBand1: TppGroupFooterBand
       Background.Brush.Style = bsClear
+      PrintHeight = phDynamic
       HideWhenOneDetail = False
       mmBottomOffset = 0
       mmHeight = 25000
@@ -4436,6 +4437,7 @@ object Report: TppReport
           #13#10#0
         RemoveEmptyLines = False
         ShiftRelativeTo = ppRichText2
+        Stretch = True
         Transparent = True
         mmHeight = 16669
         mmLeft = 0
