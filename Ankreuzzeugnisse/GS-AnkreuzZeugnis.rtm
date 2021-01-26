@@ -5185,6 +5185,7 @@ object Report: TppReport
         PrinterSetup.mmPaperHeight = 297000
         PrinterSetup.mmPaperWidth = 210000
         PrinterSetup.PaperSize = 9
+        Template.Offset = 284
         Template.Format = ftASCII
         Units = utMillimeters
         Version = '15.05'
@@ -8241,7 +8242,6 @@ object Report: TppReport
               Font.Size = 10
               Font.Style = [fsBold]
               RemoveEmptyLines = False
-              ShiftRelativeTo = ppSubReport17
               Stretch = True
               Transparent = True
               mmHeight = 5821
