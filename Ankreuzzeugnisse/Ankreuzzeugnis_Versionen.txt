@@ -1,0 +1,30 @@
+﻿Version 14.1.0.2022
+====================
+-Wenn für ASV keine Ankreuzkompetenzen vorhanden waren, sondern nur ein Bemerkungstext, so wurde die Überschrift für ASV nicht korrekt dargestellt. Das ist nun behoben.
+
+-Es gibt Fälle, wo bei der Fachgruppe "Deutsch" (die ja aus mehreren Fächern bestehen kann) gewünscht wird, dass die "Einzelfächer" (Lesen, Rechtschreiben, Sprachgebrauch) zusammengehalten werden, nicht aber die Gruppe "Deutsch" insgesamt. 
+Bisher war es ja möglich, jahrgangsbezogen das "Zusammenhalten" der Fachgruppen über folgende Einträge in der Konfigurationsdatei zu steuern:
+
+ZusammenhaltenE1=
+ZusammenhaltenE2=
+Zusammenhalten03=
+Zusammenhalten04=
+
+Beispiel
+ZusammenhaltenE2=Deutsch;Englisch;Mathematik
+
+Dabei wurde aber die Gruppe "Deutsch" als Ganzes zusammengehalten, was z.B. zu Seitenumbrüchen führen konnte, obwohl noch genug Platz für eines der Teilfächer vorhanden war. Nun kann über einen Eintrag "Deutsch(einzeln)" gesteuert werden, dass die Einzelfächer zusammengehalten werden, nicht aber die Fachgruppe insgesamt.
+
+Beispiel
+ZusammenhaltenE2=Deutsch(einzeln);Englisch;Mathematik
+
+Wichtig: Die funktioniert derzeit nur für die Fachgruppe "Deutsch"
+
+
+Version 15.6.2020
+==================
+-Änderungen für Druck in Dokumentenverwaltung
+
+-Anpassung der Rechtshilfebelehrung ("dehnen")
+
+-Separate Vorlage "GS-AnkreuzZeugnis_Mit_Erlaeuterung.rtm" (für Ausgabe eines Erläuterungsblattes am Ende) wird nicht mehr benötigt. Falls eine Datei "Kompetenz_Erlaeuterung.rtm" im Verzeichnis der Reportvorlage gefunden wird, wird diese automatsich am Ende jedes Zeugnisses geladen.
