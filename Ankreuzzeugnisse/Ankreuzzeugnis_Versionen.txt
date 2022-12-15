@@ -1,4 +1,10 @@
-﻿Version 14.1.0.2022
+﻿Version 15.12.2022
+- Überschüssiger Seitenumbruch, der bei der Verwendung des Zeugnisses für Jahrgangsstufe 4 beim Auslassen des Begründungstextes für den Wechsel nach Sek1 auftrat, wurde entfernt
+
+
+
+
+Version 14.10.2022
 ====================
 -Wenn für ASV keine Ankreuzkompetenzen vorhanden waren, sondern nur ein Bemerkungstext, so wurde die Überschrift für ASV nicht korrekt dargestellt. Das ist nun behoben.
 
