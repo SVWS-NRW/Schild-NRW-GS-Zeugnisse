@@ -11,4 +11,6 @@ Das Repository beinhaltet folgende Elemente:
 * das Lehrermodul für die Bearbeitung der notendateien auf dem eigenen PC
 * Beispiele für die Textbausteine und Ankreuzkompetenzen
 * Ordner für die Textzeugnisse
+* Anmeldeschein zur Anmeldung an einer weiterführenden allgemeinbildenden
+Schule der Sek. I
 
