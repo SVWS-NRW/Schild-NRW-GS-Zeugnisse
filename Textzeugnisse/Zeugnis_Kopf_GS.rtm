@@ -14,8 +14,8 @@ object Report: TppReport
   PrinterSetup.mmPaperWidth = 210000
   PrinterSetup.PaperSize = 9
   Template.FileName = 
-    'D:\schild_entwicklung\NeueVersion\SchILD-Reports\GS-Zeugnisse\Hy' +
-    'bridzeugnisse\Zeugnis_Kopf_GS.rtm'
+    'C:\SchILD-NRW\SchILD-Reports\MasterTextzeugnisse_Nov24\Zeugnis_K' +
+    'opf_GS.rtm'
   Template.Format = ftASCII
   Units = utMillimeters
   ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
@@ -150,6 +150,7 @@ object Report: TppReport
       DataField = 'SchulLogo'
       DataPipeline = dmPipelines.EigeneSchule
       GraphicType = 'AutoDetect'
+      ParentDataPipeline = False
       DataPipelineName = 'EigeneSchule'
       mmHeight = 30000
       mmLeft = 0
