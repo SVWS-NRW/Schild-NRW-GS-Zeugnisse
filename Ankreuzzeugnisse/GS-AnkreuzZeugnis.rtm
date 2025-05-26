@@ -1045,8 +1045,8 @@ object Report: TppReport
               Lines.Strings = (
                 #8230)
               RemoveEmptyLines = False
+              Stretch = True
               Transparent = True
-              VerticalAlignment = avCenter
               Visible = False
               mmHeight = 5000
               mmLeft = 0
@@ -1834,6 +1834,7 @@ object Report: TppReport
             Font.Size = 10
             Font.Style = []
             RemoveEmptyLines = False
+            Stretch = True
             Transparent = True
             Visible = False
             mmHeight = 5000
@@ -2494,8 +2495,8 @@ object Report: TppReport
                   Lines.Strings = (
                     #8230)
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   mmHeight = 5000
                   mmLeft = 0
                   mmTop = 0
@@ -3605,8 +3606,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   Visible = False
                   mmHeight = 5000
                   mmLeft = 0
@@ -4656,8 +4657,8 @@ object Report: TppReport
                   Font.Size = 8
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   mmHeight = 5000
                   mmLeft = 0
                   mmTop = 0
@@ -5712,8 +5713,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   Visible = False
                   mmHeight = 5000
                   mmLeft = 0
@@ -6757,8 +6758,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   Visible = False
                   mmHeight = 5000
                   mmLeft = 0
@@ -7798,8 +7799,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   Visible = False
                   mmHeight = 5000
                   mmLeft = 0
@@ -8962,8 +8963,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   mmHeight = 5000
                   mmLeft = 0
                   mmTop = 0
@@ -9894,8 +9895,8 @@ object Report: TppReport
                   Font.Size = 10
                   Font.Style = []
                   RemoveEmptyLines = False
+                  Stretch = True
                   Transparent = True
-                  VerticalAlignment = avCenter
                   Visible = False
                   mmHeight = 5000
                   mmLeft = 0
