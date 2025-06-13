@@ -1004,7 +1004,7 @@ object Report: TppReport
               mmOverFlowOffset = 0
               mmStopPosition = 0
               mmMinHeight = 0
-              mmLeading = 0
+              mmLeading = 1000
             end
             object ppLine25: TppLine
               UserName = 'Durchstreich'
@@ -1058,7 +1058,7 @@ object Report: TppReport
               mmOverFlowOffset = 0
               mmStopPosition = 0
               mmMinHeight = 0
-              mmLeading = 0
+              mmLeading = 1000
             end
           end
           object ppGroup3: TppGroup
@@ -1797,7 +1797,7 @@ object Report: TppReport
             mmOverFlowOffset = 0
             mmStopPosition = 0
             mmMinHeight = 0
-            mmLeading = 0
+            mmLeading = 1000
           end
           object ppLine26: TppLine
             UserName = 'Durchstreich'
@@ -1847,7 +1847,7 @@ object Report: TppReport
             mmOverFlowOffset = 0
             mmStopPosition = 0
             mmMinHeight = 0
-            mmLeading = 0
+            mmLeading = 1000
           end
         end
         object ppGroup4: TppGroup
@@ -2454,7 +2454,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine27: TppLine
                   UserName = 'Durchstreich'
@@ -2507,7 +2507,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup13: TppGroup
@@ -3569,7 +3569,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine28: TppLine
                   UserName = 'Durchstreich'
@@ -3619,7 +3619,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup15: TppGroup
@@ -4630,7 +4630,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine19: TppLine
                   UserName = 'Linie'
@@ -4669,7 +4669,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup14: TppGroup
@@ -5676,7 +5676,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine31: TppLine
                   UserName = 'Durchstreich'
@@ -5726,7 +5726,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup16: TppGroup
@@ -6721,7 +6721,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine32: TppLine
                   UserName = 'Durchstreich'
@@ -6771,7 +6771,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup17: TppGroup
@@ -7762,7 +7762,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine33: TppLine
                   UserName = 'Durchstreich'
@@ -7812,7 +7812,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup18: TppGroup
@@ -8910,7 +8910,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object myDBCheckBox43: TmyDBCheckBox
                   UserName = 'chbxStufe3'
@@ -8975,7 +8975,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup19: TppGroup
@@ -9858,7 +9858,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
                 object ppLine29: TppLine
                   UserName = 'Durchstreich'
@@ -9908,7 +9908,7 @@ object Report: TppReport
                   mmOverFlowOffset = 0
                   mmStopPosition = 0
                   mmMinHeight = 0
-                  mmLeading = 0
+                  mmLeading = 1000
                 end
               end
               object ppGroup20: TppGroup
