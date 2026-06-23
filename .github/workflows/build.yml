@@ -1,21 +1,101 @@
-name: Continuous Release
+# Name des Workflows, wird in der GitHub UI angezeigt
+name: Create Release by pushing new Tag
+
 on:
+  # Workflow läuft beim Push eines Tags wie v1.2.3
   push:
-    branches:
-      - master
+    tags:
+      - 'v*'   # z.B. v1.2.3
+
+# Notwendige Berechtigungen für den Job für Release/Assets
 permissions:
   contents: write
+
 jobs:
   create-zip:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'release')"
+
     steps:
-      - uses: actions/checkout@v4
-      - run: mkdir .zip
-      - run: for i in */; do zip -r ."/.zip/${i%/}_$(date +'%Y_%m_%d').zip" "$i" *.pdf; done
-      - uses: ncipollo/release-action@v1
+      # 1) Code auschecken
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          artifacts: "./.zip/*"
-          allowUpdates: true
-          tag: v1.0.${{ github.run_number }}
+          fetch-depth: 0
+
+      # 2) Version aus dem Tag extrahieren und validieren
+      - name: Extract version from tag
+        id: ver
+        shell: bash
+        run: |
+          set -euo pipefail
+          RAW="${GITHUB_REF_NAME}"          # z.B. "v1.2.3"
+          if [[ ! "$RAW" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag muss das Format vMAJOR.MINOR.PATCH haben (z.B. v1.2.3). Bekommen: $RAW"
+            exit 1
+          fi
+          VER="${RAW#v}"                    # führendes 'v' entfernen -> "1.2.3"
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+          echo "VERSION=$VER" >> "$GITHUB_ENV"
+          echo "Release version: $VER"
+
+      # 3) .zip-Ordner vorbereiten
+      - name: Create .zip folder
+        run: mkdir -p .zip
+
+      # 4) ZIP-Zeugnisarchiv bauen, basierend auf Allowlist (.zipallowzeugnisse)
+      - name: Build ZIP from .zipallowzeugnisse
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          #Name der zip-Datei
+          ZIP_NAME="Zeugnisse-Grundschule-v${VERSION}-$(date +'%d.%m.%Y').zip"							   
+
+          #Windows-Zeilenenden in .zipallowzeugnisse entfernen (falls Datei unter Windows bearbeitet wurde)
+          sed -i 's/\r$//' .zipallowzeugnisse
+
+          echo "Folgende Einträge werden ins ZIP übernommen:"
+          while IFS= read -r p; do
+            if [[ -e "$p" ]]; then
+              echo "  - $p"
+            else
+              echo "  - WARNUNG: '$p' existiert nicht und wird ignoriert."
+            fi
+          done < .zipallowzeugnisse
+
+          # Jede Zeile in .zipallowzeugnisse ist Datei/Ordner im Repo-Root
+          zip -r ".zip/${ZIP_NAME}" -@ < .zipallowzeugnisse
+
+      # 5) ZIP-GS-Notenmodul bauen, basierend auf Allowlist (.zipallownotenmodul)
+      - name: Build ZIP from .zipallownotenmodul
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          #Name der zip-Datei
+          ZIP_NAME="GS-Notenmodul-$(date +'%d.%m.%Y').zip"							   
+
+          #Windows-Zeilenenden in .zipallownotenmodul entfernen (falls Datei unter Windows bearbeitet wurde)
+          sed -i 's/\r$//' .zipallownotenmodul
+
+          echo "Folgende Einträge werden ins ZIP übernommen:"
+          while IFS= read -r p; do
+            if [[ -e "$p" ]]; then
+              echo "  - $p"
+            else
+              echo "  - WARNUNG: '$p' existiert nicht und wird ignoriert."
+            fi
+          done < .zipallownotenmodul
+
+          # Jede Zeile in .zipallownotenmodul ist Datei/Ordner im Repo-Root
+          zip -r ".zip/${ZIP_NAME}" -@ < .zipallownotenmodul
+
+      # 5) GitHub Release erstellen oder aktualisieren
+      - name: Create/Update GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ".zip/*"                         # alle ZIPs im .zip-Ordner anhängen
+          allowUpdates: true                          # Release bei gleichem Tag aktualisieren
+          tag: "${{ github.ref_name }}"               # = vX.Y.Z
+          name: "Release v${{ steps.ver.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
